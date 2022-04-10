@@ -19,10 +19,6 @@ const paths = {
   'css'   : 'dest/css/',
   'jsSrc' : 'src/js/**/*.js',
   'jsDest': 'dest/js/',
-
-  'wordpress': '../wordpress/wordpress/wp-content/themes/',
-  'cssWP': 'yuta_beatbox/css/',
-  'jsWP': 'yuta_beatbox/js/',
 }
 
 gulp.task("sass", () => {
@@ -36,7 +32,6 @@ gulp.task("sass", () => {
       .pipe(clean())
       .pipe(sourcemaps.write("./"))
       .pipe(gulp.dest(paths.css))
-      .pipe(gulp.dest(paths.wordpress + paths.cssWP))
   );
 });
 
@@ -52,12 +47,12 @@ gulp.task("pug", () => {
   );
 });
 
+
 gulp.task("js", () => {
   return(
     gulp
       .src(paths.jsSrc)
       .pipe(dest(paths.jsDest))
-      .pipe(dest(paths.wordpress + paths.jsWP))
   )
 });
 
