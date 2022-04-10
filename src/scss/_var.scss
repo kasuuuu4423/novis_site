@@ -1,0 +1,70 @@
+/*
+media query
+*/
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+@mixin mq($breakpoint) {
+@media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+}
+}
+
+
+/*
+transition
+*/
+$transition: .2s;
+
+
+
+/*
+color
+*/
+$blue: #528ca2;
+$red: #e43e3e;
+$light_blue: #70c7da;
+$pastel_blue: #e6f5fa;
+//$color_insta: linear-gradient(to bottom right, rgb(255, 185, 55), $blue);
+$pink: #ed8b8b;
+$purple: rgb(181, 99, 232);
+$dark_purple: rgb(75, 42, 96);
+$blue_vivid: #3e21e2;
+$green: #35e03e;
+$yellow: #dde02f;
+$dark_grey: #3b3b3b;
+$mid_grey: #888888;
+$white: rgba($color: #fff, $alpha: .95);
+$black: #333333;
+$grey: #e9e9e9;
+$alpha0: rgba(#000, 0);
+
+
+
+/*
+font size
+*/
+$font-m: 1rem;
+
+$font-xl: 5 * $font-m;
+$font-xll: 3 * $font-m;
+$font-l: 1.3 * $font-m;
+$font-lm: 1.125 * $font-m;
+
+$font-ms: 0.875*$font-m;
+$font-s: 0.75 * $font-m;
+$font-ss: 0.6 * $font-m;
+
+
+
+/*
+margin
+*/
+$margin-l: 108px;
+$margin-lm: 48px;
+$margin-m: 20px;
+$margin-ms: 13px;
+$margin-s: 8px;

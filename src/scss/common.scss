@@ -1,0 +1,12 @@
+@import "_var";
+
+.sp_only{
+  @include mq(md){
+    display: none;
+  }
+}
+.pc_only{
+  @include sp(){
+    display: none;
+  }
+}
